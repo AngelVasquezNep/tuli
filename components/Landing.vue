@@ -9,7 +9,7 @@
               p Sabemos los difícil que puede llegar a ser la vida y estamos para ayudarte, a partir de hoy tus problemas empezarán a mejorar.
           .columns
             .column
-              p Atendemos:
+              p.button.is-large Atendemos:
           .columns
             .column
               .content

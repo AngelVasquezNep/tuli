@@ -6,7 +6,7 @@ module.exports = {
     title: 'Tuli',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
       { hid: 'description', name: 'description', content: 'Tuli | Consultoria para Adolescentes' }
     ],
     link: [
@@ -16,7 +16,13 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+ loading: { color: '#3B8070' },
+ /*
+ ** Customize the progress bar color
+ */
+  css: [
+    'assets/main.css'
+  ],
   /*
   ** Build configuration
   */
