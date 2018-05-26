@@ -119,7 +119,10 @@
                       figure.image.is-128x128
                         img(src="~/assets/icons/017.png", alt="Ayuda")
                 br
-                button.button.is-large.is-psico Agendar Cita
+                button.button.is-large.is-psico(@click="showModal") Agendar Cita
+
+          myModal(:active="active", @close="showModal")
+
           br
           .columns
             .column
@@ -133,6 +136,25 @@
                   br
           br
 </template>
+
+<script>
+import myModal from '~/components/ModalCita.vue'
+
+export default {
+  components: { myModal },
+  data () {
+    return {
+      active: false
+    }
+  },
+  methods: {
+    showModal () {
+      this.active = !this.active
+    }
+  }
+}
+</script>
+
 
 <style lang="scss" scoped>
 @import '~/assets/variables.scss';
