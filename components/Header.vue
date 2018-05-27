@@ -8,7 +8,7 @@
               figure.image.logo.is-48x48
                 img(src='~static/logo1.png', alt='Tuli')
             .navbar-item
-              h1.subtitle.is-size-3 Tuli
+              h1.subtitle.is-size-1.title-logo Tuli
 
     .hero-body
       .container.has-text-centered
@@ -24,10 +24,16 @@
 </template>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Salsa');
 .logo {
   margin: 10px;
   img {
     max-height: initial;
   }
 }
+
+.title-logo {
+  font-family: 'Salsa', cursive;
+}
+
 </style>
