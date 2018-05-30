@@ -13,7 +13,7 @@ $psico: #00d1b2;
 
 $psico: #694F5D;
 $psico-invert: findColorInvert($psico);
-$psico1: #68A691;
+$psico1: #00d1b2;
 $psico1-invert: findColorInvert($psico1);
 $psico2: #BFD3C1;
 $psico2-invert: findColorInvert($psico2);
@@ -59,4 +59,8 @@ $link-focus-border: $primary;
 
 p {
     font-size: 1.1em;
+  &::selection {
+    color: $psico-invert;
+    background-color: $psico;
+  }
 }
