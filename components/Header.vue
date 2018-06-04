@@ -16,12 +16,43 @@
         h2.subtitle Especialistas en problemas de adolescentes, niños y adultos jóvenes
 
     .hero-foot
-      nav.navbar
-        .navbar-end
-          nuxt-link.navbar-item(to='/' ) Home
-          nuxt-link.navbar-item(to='/preguntas') Preguntas frecuentes
-          nuxt-link.navbar-item(to='/contacto') Contacto
+      nav.navbar(role='navigation', aria-label='main navigation')
+        .navbar-brand
+          a.navbar-burger(
+              @click="showMenu"
+              :class="{'is-active': isShowMenu}",
+              role='button',
+              aria-label='menu',
+              aria-expanded='false'
+            )
+            span(aria-hidden='true')
+            span(aria-hidden='true')
+            span(aria-hidden='true')
+        .navbar-menu( :class="{'is-active': isShowMenu}")
+          .navbar-end(@click="closeMenu")
+            nuxt-link.navbar-item(to='/') Home
+            nuxt-link.navbar-item(to='/preguntas') Preguntas frecuentes
+            nuxt-link.navbar-item(to='/contacto') Contacto
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      isShowMenu: false
+    }
+  },
+  methods: {
+    showMenu() {
+      this.isShowMenu = !this.isShowMenu
+    },
+    closeMenu() {
+      this.isShowMenu = false
+    }
+  }
+}
+</script>
+
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Salsa');
